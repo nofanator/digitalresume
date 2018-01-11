@@ -1,9 +1,19 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 
+import Intro from './components/intro'
+import Education from './components/education'
+import Experience from './components/experience'
+import Skills from './components/skills'
+
 function App(props) {
     return (
-        <div>Hello world this is a test</div>
+        <div>
+            <Intro />
+            <Education />
+            <Skills />
+            <Experience />
+        </div>
     )
 }
 
