@@ -1,9 +1,4 @@
-import React from 'react'
+import Intro from './intro'
+import { withIntroData } from './withIntroData'
 
-function Intro(props) {
-    return (
-        <div>Intro Section</div>
-    )
-}
-
-export default Intro
+export default withIntroData(Intro)
