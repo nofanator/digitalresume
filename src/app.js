@@ -1,10 +1,10 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 
-import Intro from './components/intro'
-import Education from './components/education'
-import Experience from './components/experience'
-import Skills from './components/skills'
+import Intro from './components/Intro'
+import Education from './components/Education'
+import Experience from './components/Experience'
+import Skills from './components/Skills'
 
 function App(props) {
     return (
