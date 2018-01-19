@@ -8,7 +8,7 @@ const defaultState = {
 const skills = (state = defaultState, action) => {
     switch (action.type) {
         case UPDATE_SKILLS:
-            return Object.assign({}, state, action.payload, { loaded: true })
+            return Object.assign({}, state, { skills: [...action.payload] }, { loaded: true })
         default:
             return state
     }

@@ -26,4 +26,17 @@ function getSkills() {
         })
 }
 
-export { getIntro, getSkills }
+function getExperience() {
+    return axios.get('/mock.json')
+    .catch((error) => {
+        console.log(error)
+        return null
+    })
+    .then((response) => {
+        const data = response.data
+        const payload = data.experience
+        return payload
+    })
+}
+
+export { getIntro, getSkills, getExperience }

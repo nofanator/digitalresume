@@ -1,2 +1,4 @@
 import Experience from './Experience'
-export default Experience
+import { withExpierenceData } from '../../hocs/withExperienceData'
+
+export default withExpierenceData(Experience)

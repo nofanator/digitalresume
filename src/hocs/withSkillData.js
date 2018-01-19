@@ -21,10 +21,10 @@ export function withSkillData(Wrapper) {
             if (!data.loaded) {
                 return <span>Loading...</span>
             }
- 
+
             return (<Wrapper {...data} />)
         }
-    } 
+    }
 
     function mapStateToProps(state) {
         return {
