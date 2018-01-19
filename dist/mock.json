@@ -1,0 +1,97 @@
+{
+    "intro": {
+        "name": "Chris Knopf",
+        "summary": "Team-orientated, full stack developer with a focus on web technologies. Quick learner with experience in a variety of tools and frameworks",
+        "profileImage": "/profile-image.jpg",
+        "email": "chris@nofmonster.com",
+        "phone": "507.649.1263"
+    },
+    "education": {
+        "school": "Minnesota State University, Mankato",
+        "start": "2002",
+        "end": "2006",
+        "major": "Computer & Information Science",
+        "minor": "Fine Arts: Graphic Design"
+    },
+    "skills": [
+        { 
+            "title": "Core Technologies",  
+            "list": ["C#", "SQL", "HTML", "CSS", "JavaScript", "Node.js", "PHP", "Unit Testing"]
+        },
+        {
+            "title": "Tools & Frameworks",
+            "list": ["ASP.NET MVC", "ASP.NET Web API", "ASP.NET Web Forms", "Entity Framework", "React", "Redux", "Sass/Less", "WordPress",  "jQuery", "Microsoft Azure", "IIS"]
+        }
+    ],
+    "experience": [
+        {
+            "id": 1,
+            "employer": "Fanball",
+            "title": "Senior Developer",
+            "start": "March 2017",
+            "end": "January 2018",
+            "summary": "Worked with a passionate team to develop and launch a daily fantasy sports product for the 2017 NFL Season.",
+            "achievements": [
+                "Gained expertise building single page applications using React.js, GraphQL, and Apollo",
+                "Honed my skills with modern front-end tools & architecture patterns",
+                "Worked with systems that have predictable patterns of high traffic and display updated stats in near real time",
+                "Advocated for agile processes within the team, and releasing MVP solutions to maximize efficiency"
+            ]
+        },
+        {
+            "id": 2,
+            "employer": "Duffy",
+            "title": "Senior Developer",
+            "start": "October 2015",
+            "end": "January 2017",
+            "summary": "Focused on building native mobile apps with a team of highly-skilled developers of various disciplines and expert designers.",
+            "achievements": [
+                "Worked on a team rebuilding the key quote generation tool for esurance.com using React & Redux",
+                "Built the foundation for an isomorphic React/Express website for duffy.com",
+                "Created RESTful micro services & optimization layers for mobile applications",
+                "Wrote enterprise software designed to pass integration tests, unit-tests, and code-quality gates"
+            ]
+        },
+        {
+            "id": 3,
+            "employer": "Gybe Software",
+            "title": "Founder",
+            "start": "November 2013",
+            "end": "October 2015",
+            "summary": "Founded a web development company focused on completing small projects and working with Startups to build their business technologies.",
+            "achievements": [
+                "Gained experience managing different aspects of a project’s life-cycle: sales, RFPs, invoicing, etc.",
+                "Built and maintained a sports-scheduling SASS platform from the ground up",
+                "Completed front-end focused, interactive websites for agencies in the Twin Cities"
+            ]
+        },
+        {
+            "id": 4,
+            "employer": "RBA",
+            "title": "Senior Developer",
+            "start": "September 2011",
+            "end": "October 2013",
+            "summary": "Provided technical expertise and acted as the development lead on enterprise projects. Responsible for code quality, training and mentoring, deployments, and documentation.",
+            "achievements": [
+                "Lead groups of three to five developers on projects for clients",
+                "Provided on-site development support for maintenance tasks outside of scheduled releases",
+                "Responsible for packaging builds, documentation, and collaborating with technical groups for deployments",
+                "Worked closely with PMs, BAs, and developers throughout project life-cycles"
+            ]
+        },
+        {
+            "id": 5,
+            "employer": "Ratchet",
+            "title": "Developer",
+            "start": "August 2006",
+            "end": "September 2011",
+            "summary": "Involved in project definition, data modeling, development, maintenance, server configuration, deployment, and creation of critical services and tools for enterprise websites.",
+            "achievements": [
+                "Worked closely with development teams to build and maintain complex websites and web applications",
+                "Helped build core tools & frameworks which powered the majority of sites built by Ratchet",
+                "Expertise maintaining a professional, positive, and productive attitude when working on high stress projects",
+                "Gained the ability to adapt to different languages quickly such as cold fusion and PHP"
+            ]
+        }
+    ]    
+}

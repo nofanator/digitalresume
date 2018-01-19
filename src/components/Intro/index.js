@@ -1,4 +1,4 @@
 import Intro from './Intro'
-import { withIntroData } from './withIntroData'
+import { withIntroData } from '../../hocs/withIntroData'
 
 export default withIntroData(Intro)

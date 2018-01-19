@@ -1,2 +1,4 @@
 import Skills from './Skills'
-export default Skills
+import { withSkillData } from '../../hocs/withSkillData'
+
+export default withSkillData(Skills)
