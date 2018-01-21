@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from "react-redux" 
-import { getSkills } from '../api'
-import { updateSkills } from '../store/actions/skillsActions'
+import { getSkills } from 'mockAPI'
+import { updateSkills } from 'store/actions/skillsActions'
 
 export function withSkillData(Wrapper) {
     class dataProvider extends Component {

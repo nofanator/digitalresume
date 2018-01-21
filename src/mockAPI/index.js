@@ -1,5 +1,5 @@
 import axios from 'axios';
- 
+
 function getIntro() {
     return axios.get('/mock.json')
         .catch((error) => {

@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from "react-redux" 
-import { getIntro } from '../api'
-import { updateIntro } from '../store/actions/introActions'
+import { getIntro } from 'mockAPI'
+import { updateIntro } from 'store/actions/introActions'
 
 export function withIntroData(Wrapper) {
     class dataProvider extends Component {

@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from "react-redux" 
-import { getExperience } from '../api'
-import { updateExperience } from '../store/actions/experienceActions'
+import { getExperience } from 'mockAPI'
+import { updateExperience } from 'store/actions/experienceActions'
 
 export function withExpierenceData(Wrapper) {
     class dataProvider extends Component {
