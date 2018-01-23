@@ -14,6 +14,14 @@ import styled from 'styled-components'
 const Div = styled.div`
     font-family: 'Inconsolata', monospace;
     font-size: 16px;
+
+    h2 {
+        margin: 0 0 16px;
+    }
+     
+    h3 {
+        margin: 12px 0;
+    }
 `
 
 function App(props) {

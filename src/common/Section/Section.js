@@ -10,7 +10,7 @@ const Div = styled.div`
 
 const DivInner = styled.div`
     max-width: 600px;
-    padding: 8px;
+    padding: 16px 8px;
     margin: 0 auto;
 `
 
@@ -20,7 +20,7 @@ function Section(props) {
     return (
         <Div textColor={ theme.TEXT } backgroundColor={ theme.BACKGROUND }>
             <DivInner>
-            { props.children }
+                { props.children }
             </DivInner>
         </Div>
     )

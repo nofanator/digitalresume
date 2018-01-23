@@ -1,4 +1,24 @@
 import React from 'react'
+import styled from 'styled-components'
+
+const Ul = styled.ul`
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+`
+const Li = styled.li`
+    display: flex;
+    align-items: center;
+`
+
+const Sep = styled.span`
+    display: inline-block;
+    margin: 0 6px;
+    font-size: 1.4em;
+    font-weight: bold;
+    line-height: 1rem;
+`
 
 function SkillsSection(props) {
     const { section } = props
@@ -7,13 +27,14 @@ function SkillsSection(props) {
         <div>
             <h3>{ section.title }</h3>
             {list && list.length > 0 &&
-                <ul>
+                <Ul>
                     {list.map((skill, i) => 
-                        <li key={`skill-item-${i}`}>
+                        <Li key={`skill-item-${i}`}>
+                            <Sep>&bull;</Sep>
                             { skill }
-                        </li>
+                        </Li>
                     )}
-                </ul>
+                </Ul>
             }
         </div>
     )
