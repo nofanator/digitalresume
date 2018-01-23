@@ -1,28 +1,33 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components' 
+import { getTheme } from 'colors'
 
 const Div = styled.div`
+    color: ${props => props.textColor};
+    background: ${props => props.backgroundColor};
+`
+
+const DivInner = styled.div`
+    max-width: 600px;
     padding: 8px;
-    color: ${props => props.isPrimary ? 'rgba(255, 255, 255, 0.9)' : 'rgba(0, 0, 0, 0.7)'};
-    background: ${props => props.isPrimary ? 'rgb(48, 50, 60)' : 'rgb(200, 187, 135)'};
+    margin: 0 auto;
 `
 
 function Section(props) {
-    const { isPrimary } = props
+    const { themeName } = props
+    const theme = getTheme(themeName)
     return (
-        <Div isPrimary={ isPrimary }>
+        <Div textColor={ theme.TEXT } backgroundColor={ theme.BACKGROUND }>
+            <DivInner>
             { props.children }
+            </DivInner>
         </Div>
     )
 }
 
 Section.propTypes = {
-    isPrimary: PropTypes.bool,
-}
-
-Section.defaultProps = {
-    isPrimary: true,
+    themeName: PropTypes.string,
 }
 
 export default Section

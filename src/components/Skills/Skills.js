@@ -1,5 +1,7 @@
 import React from 'react'
 import SkillsSection from './components/SkillsSection'
+import Section from 'common/Section'
+import { themes } from 'colors'
 
 function Skills(props) {
 
@@ -14,7 +16,7 @@ function Skills(props) {
 
 
     return (
-        <div>
+        <Section themeName={ themes.NEUTRAL }>
             <h2>Skills</h2>
             {skills.map((section, i) => 
                 <SkillsSection 
@@ -22,7 +24,7 @@ function Skills(props) {
                     section={ section } 
                 />
             )}
-        </div>
+        </Section>
     )
 }
 

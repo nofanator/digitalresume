@@ -1,14 +1,16 @@
 import React from 'react'
 import ProfileImage from './components/ProfileImage'
+import Section from 'common/Section'
+
 
 function Intro(props) {
     const { name, summary, profileImage } = props
     return (
-        <div>
+        <Section  isPrimary={ false }>
             <ProfileImage imagePath={ profileImage } />
             <h1>{ name }</h1>
             <p>{ summary }</p>
-        </div>
+        </Section>
     )
 }
 
