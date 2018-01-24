@@ -9,6 +9,9 @@ import styled from 'styled-components'
 
 const Div = styled.div`
     text-align: center;
+    p {
+        font-style: italic;
+    }
 `
 
 function Loading(props) {
