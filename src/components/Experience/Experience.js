@@ -3,7 +3,6 @@ import Job from './components/Job'
 import Section from 'common/Section'
 import { themes } from 'colors'
 
-
 function Experience(props) {
     const { experience } = props
     return (

@@ -10,7 +10,7 @@ const Div = styled.div`
 
 const DivInner = styled.div`
     max-width: 600px;
-    padding: 16px 8px;
+    padding: 20px 10px;
     margin: 0 auto;
 `
 

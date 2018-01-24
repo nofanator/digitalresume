@@ -3,6 +3,10 @@ import { connect } from "react-redux"
 import { getSkills } from 'mockAPI'
 import { updateSkills } from 'store/actions/skillsActions'
 
+
+import Transition from 'common/Transition'
+import Loading from 'common/Loading'
+
 export function withSkillData(Wrapper) {
     class dataProvider extends Component {
         /* Fetch and cache data if not loaded */
@@ -10,7 +14,7 @@ export function withSkillData(Wrapper) {
             const { data, updateSkills } = this.props
             if (!data.loaded) {
                 getSkills().then(
-                    skillData => setTimeout(() => updateSkills(skillData), 2000)
+                    skillData => setTimeout(() => updateSkills(skillData), 1500)
                 )
             }
         }
@@ -18,11 +22,17 @@ export function withSkillData(Wrapper) {
         render() {
             const { data } = this.props
 
-            if (!data.loaded) {
-                return <span>Loading...</span>
-            }
-
-            return (<Wrapper {...data} />)
+            return (
+                <Transition 
+                    startComponent={ 
+                        <Loading description="Loading skill data... a little bit slower now." /> 
+                    }
+                    endComponent={ data.loaded 
+                        ? <Wrapper {...data} />
+                        : null
+                    } 
+                />
+            )
         }
     }
 

@@ -14,13 +14,20 @@ import styled from 'styled-components'
 const Div = styled.div`
     font-family: 'Inconsolata', monospace;
     font-size: 16px;
+    line-height: 20px;
+
+    h1, h2 {
+        font-family: 'Play', sans-serif;
+        font-weight: 700;
+    }
 
     h2 {
-        margin: 0 0 16px;
+        margin: 0 0 20px;
     }
      
     h3 {
         margin: 12px 0;
+        font-weight: 700;
     }
 `
 
@@ -29,7 +36,7 @@ function App(props) {
         <Provider store={ store }>
             <Div>
                 <Intro />
-                <Education />
+                {/* <Education /> */}
                 <Skills />
                 <Experience />
             </Div>

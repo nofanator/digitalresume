@@ -3,6 +3,9 @@ import { connect } from "react-redux"
 import { getIntro } from 'mockAPI'
 import { updateIntro } from 'store/actions/introActions'
 
+import Transition from 'common/Transition'
+import Loading from 'common/Loading'
+
 export function withIntroData(Wrapper) {
     class dataProvider extends Component {
         /* Fetch and cache data if not loaded */
@@ -10,7 +13,7 @@ export function withIntroData(Wrapper) {
             const { data, updateIntro } = this.props
             if (!data.loaded) {
                 getIntro().then(
-                    introData => setTimeout(() => updateIntro(introData), 1000)
+                    introData => setTimeout(() => updateIntro(introData), 500)
                 )
             }
         }
@@ -18,11 +21,17 @@ export function withIntroData(Wrapper) {
         render() {
             const { data } = this.props
 
-            if (!data.loaded) {
-                return <span>Loading...</span>
-            }
- 
-            return (<Wrapper {...data} />)
+            return (
+                <Transition 
+                    startComponent={ 
+                        <Loading description="Waiting for intro data..." /> 
+                    }
+                    endComponent={ data.loaded 
+                        ? <Wrapper {...data} />
+                        : null
+                    } 
+                />
+            )
         }
     } 
 

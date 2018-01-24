@@ -5,7 +5,7 @@ export const themes = {
 }
 
 const lightTheme = {
-    BACKGROUND: '#f1ede4',    
+    BACKGROUND: '#EFF5F9',    
     TEXT: '#525951'
 }
 
