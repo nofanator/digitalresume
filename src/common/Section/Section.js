@@ -10,16 +10,16 @@ const Div = styled.div`
 
 const DivInner = styled.div`
     max-width: 600px;
-    padding: 40px 10px;
+    padding: ${props => props.skinny ? '10px' : '40px 10px'};
     margin: 0 auto;
 `
 
 function Section(props) {
-    const { themeName } = props
+    const { themeName, skinny } = props
     const theme = getTheme(themeName)
     return (
         <Div textColor={ theme.TEXT } backgroundColor={ theme.BACKGROUND }>
-            <DivInner>
+            <DivInner skinny={ skinny }>
                 { props.children }
             </DivInner>
         </Div>
@@ -28,6 +28,11 @@ function Section(props) {
 
 Section.propTypes = {
     themeName: PropTypes.string,
+    skinny: PropTypes.bool,
+}
+
+Section.defaultProps = {
+    skinny: false,
 }
 
 export default Section

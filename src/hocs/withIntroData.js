@@ -13,7 +13,7 @@ export function withIntroData(Wrapper) {
             const { data, updateIntro } = this.props
             if (!data.loaded) {
                 getIntro().then(
-                    introData => setTimeout(() => updateIntro(introData), 500)
+                    introData => setTimeout(() => updateIntro(introData), 400)
                 )
             }
         }
@@ -23,8 +23,9 @@ export function withIntroData(Wrapper) {
 
             return (
                 <Transition 
-                    startComponent={ 
-                        <Loading description="Waiting for intro data..." /> 
+                    startComponent={ !data.loaded
+                        ? <Loading description="Waiting for intro data..." /> 
+                        : null
                     }
                     endComponent={ data.loaded 
                         ? <Wrapper {...data} />

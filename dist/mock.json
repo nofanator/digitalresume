@@ -25,7 +25,7 @@
     ],
     "experience": [
         {
-            "id": 1,
+            "id": "fanball",
             "employer": "Fanball",
             "title": "Senior Developer",
             "start": "March 2017",
@@ -39,7 +39,7 @@
             ]
         },
         {
-            "id": 2,
+            "id": "duffy",
             "employer": "Duffy",
             "title": "Senior Developer",
             "start": "October 2015",
@@ -53,7 +53,7 @@
             ]
         },
         {
-            "id": 3,
+            "id": "gybe",
             "employer": "Gybe Software",
             "title": "Founder",
             "start": "November 2013",
@@ -66,7 +66,7 @@
             ]
         },
         {
-            "id": 4,
+            "id": "rba",
             "employer": "RBA",
             "title": "Senior Developer",
             "start": "September 2011",
@@ -80,7 +80,7 @@
             ]
         },
         {
-            "id": 5,
+            "id": "ratchet",
             "employer": "Ratchet",
             "title": "Developer",
             "start": "August 2006",
@@ -93,5 +93,17 @@
                 "Gained the ability to adapt to different languages quickly such as cold fusion and PHP"
             ]
         }
-    ]    
+    ],    
+    "about": {
+        "summary": "I built this site to demonostrate familiarity with the technologies listed below. This is over-engineered and meant to provoke discussion about front-end architecture patterns. The code is just as important as the content, checkout the public repo.",
+        "tech": [
+            "React.js",
+            "Redux",
+            "Mobile First Design",
+            "Styled Components",
+            "Mock API",
+            "HOC data loading pattern"
+        ],
+        "repo": "http://www.google.com"
+    }
 }

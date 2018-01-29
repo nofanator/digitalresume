@@ -39,4 +39,33 @@ function getExperience() {
     })
 }
 
-export { getIntro, getSkills, getExperience }
+function getExperienceById(id) {
+    return axios.get('/mock.json')
+    .catch((error) => {
+        console.log(error)
+        return null
+    })
+    .then((response) => {
+        const data = response.data
+        const experience = data.experience
+        
+        const payload = experience.find(x => x.id == id)
+        return payload
+    })
+}
+
+function getAbout() {
+    return axios.get('/mock.json')
+        .catch((error) => {
+            console.log(error)
+            return null
+        })
+        .then((response) => {
+            const data = response.data
+            const payload = data.about
+            return payload
+        })
+}
+
+
+export { getIntro, getSkills, getExperience, getAbout, getExperienceById }

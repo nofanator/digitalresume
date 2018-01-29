@@ -1,8 +1,9 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import { Link } from 'react-router-dom'
 
-import Achievements from './components/Achievements'
 import JobTitle from './components/JobTitle'
+import JobDuration from './components/JobDuration'
 
 import styled from 'styled-components'
 import { getTheme } from 'colors'
@@ -16,15 +17,9 @@ const Div = styled.div`
     }
     &:last-child {
         border-bottom: none;
+        margin-bottom: 0;
+        padding-bottom: 0;
     }
-`
-
-const A = styled.a`
-    display: inherit;
-    text-decoration: underline;
-    text-transform: uppercase;
-    cursor: pointer;
-    text-align: right;
 `
 
 function Job(props) {
@@ -34,11 +29,10 @@ function Job(props) {
 
     return (
         <Div borderColor={ theme.TEXT }>
-            <span>{`${job.start} - ${job.end}`}</span>
-            <JobTitle employer={ job.employer } title={ job.title } />
+            <JobDuration start={ job.start } end={ job.end } />
+            <h3><JobTitle employer={ job.employer } title={ job.title } /></h3>
             <p>{ job.summary }</p>
-            <A>Learn more</A>
-            { /* <Achievements list={ job.achievements } /> */ }
+            <Link to={`/job/${job.id}`}>Learn more</Link>
         </Div>
     )
 }

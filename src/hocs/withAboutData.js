@@ -1,20 +1,19 @@
 import React, { Component } from 'react'
 import { connect } from "react-redux" 
-import { getSkills } from 'mockAPI'
-import { updateSkills } from 'store/actions/skillsActions'
-
+import { getAbout } from 'mockAPI'
+import { updateAbout } from 'store/actions/aboutActions'
 
 import Transition from 'common/Transition'
 import Loading from 'common/Loading'
 
-export function withSkillData(Wrapper) {
+export function withAboutData(Wrapper) {
     class dataProvider extends Component {
         /* Fetch and cache data if not loaded */
         componentWillMount() {
-            const { data, updateSkills } = this.props
+            const { data, updateAbout } = this.props
             if (!data.loaded) {
-                getSkills().then(
-                    skillData => setTimeout(() => updateSkills(skillData), 1750)
+                getAbout().then(
+                    aboutData => setTimeout(() => updateAbout(aboutData), 600)
                 )
             }
         }
@@ -24,9 +23,9 @@ export function withSkillData(Wrapper) {
 
             return (
                 <Transition 
-                    startComponent={ !data.loaded
-                        ? <Loading description="Loading skill data... a little bit slower now." />
-                        : null 
+                    startComponent={ !data.loaded 
+                        ? <Loading description="Waiting for about data..." /> 
+                        : null
                     }
                     endComponent={ data.loaded 
                         ? <Wrapper {...data} />
@@ -35,17 +34,17 @@ export function withSkillData(Wrapper) {
                 />
             )
         }
-    }
+    } 
 
     function mapStateToProps(state) {
         return {
-            data: state.skills,
+            data: state.about,
         }
     }
     
     function mapDispatchToProps(dispatch) {
         return {
-            updateSkills: (skillData) => dispatch(updateSkills(skillData))
+            updateAbout: (aboutData) => dispatch(updateAbout(aboutData))
         }
     }
 

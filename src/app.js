@@ -1,45 +1,21 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import { Provider } from "react-redux"
+import { HashRouter  as Router, Route } from 'react-router-dom'
 
 import store from "store"
 
-import Intro from 'components/Intro'
-import Education from 'components/Education'
-import Experience from 'components/Experience'
-import Skills from 'components/Skills'
-
-import styled from 'styled-components'
-
-const Div = styled.div`
-    font-family: 'Inconsolata', monospace;
-    font-size: 16px;
-    line-height: 20px;
-
-    h1, h2 {
-        font-family: 'Play', sans-serif;
-        font-weight: 700;
-    }
-
-    h2 {
-        margin: 0 0 20px;
-    }
-     
-    h3 {
-        margin: 12px 0;
-        font-weight: 700;
-    }
-`
+import { Home, JobDetail } from "pages"
 
 function App(props) {
     return (
         <Provider store={ store }>
-            <Div>
-                <Intro />
-                {/* <Education /> */}
-                <Skills />
-                <Experience />
-            </Div>
+            <Router>
+                <div>
+                    <Route exact path="/" component={ Home } />
+                    <Route path="/job/:id" component={ JobDetail } />
+                </div>
+            </Router>
         </Provider>
     )
 }

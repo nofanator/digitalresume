@@ -11,12 +11,10 @@ const TitleInner = styled.span`
 function JobTitle(props) {
     const { employer, title } = props
     return (
-        <h3>
-            <TitleInner>
-                { employer }
-                <span>{ title }</span>
-            </TitleInner>
-        </h3>
+        <TitleInner>
+            { employer }
+            <span>{ title }</span>
+        </TitleInner>
     )
 }
 

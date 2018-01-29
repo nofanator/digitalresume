@@ -23,8 +23,9 @@ export function withExpierenceData(Wrapper) {
 
             return (
                 <Transition 
-                    startComponent={ 
-                        <Loading description="Loading experience data, How slow can we go?" /> 
+                    startComponent={ !data.loaded 
+                        ? <Loading description="Loading experience data, How slow can we go?" /> 
+                        : null
                     }
                     endComponent={ data.loaded 
                         ? <Wrapper {...data} />

@@ -80,7 +80,7 @@ class Transition extends Component {
 }
 
 Transition.propTypes = {
-    startComponent: PropTypes.element.isRequired,
+    startComponent: PropTypes.element,
     endComponent: PropTypes.element,
 }
 
