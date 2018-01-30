@@ -4,10 +4,15 @@ import { themes } from 'colors'
 
 import styled from 'styled-components'
 import { JobDuration, JobTitle, Achievements } from '../components/Job'
+import ImageGrid from 'common/ImageGrid'
 
 const Div = styled.div`
     h1 {
         margin-top: 0;
+    }
+
+    p {
+        margin-bottom: 0;
     }
 `
 
@@ -24,6 +29,8 @@ const DivTitle = styled.div`
 
 function Detail(props) {
     const { job } = props
+
+    const hasPhotos = job.photos && job.photos.length > 0
     return (
         <div>
             <Section themeName={ themes.LIGHT }>
@@ -40,6 +47,12 @@ function Detail(props) {
                 <h3>Achievements</h3>
                 <Achievements list={ job.achievements } />
             </Section>
+            {hasPhotos &&
+                <Section>
+                    <ImageGrid images={ job.photos } />
+                </Section>
+            }
+ 
         </div>
     )
 }

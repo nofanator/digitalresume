@@ -10,14 +10,18 @@ const Div = styled.div`
     h1 {
         margin-top: 20px;
     }
+
+    p {
+        margin-bottom: 0;
+    }
 `
 
 
 
 function Intro(props) {
-    const { name, summary, profileImage } = props
+    const { name, summary, profileImage, backgroundImage } = props
     return (
-        <Section backgroundImage="/intro-bg.jpg">
+        <Section backgroundImage={ backgroundImage }>
             <Div>
                 <ProfileImage imagePath={ profileImage } />
                 <h1>{ name }</h1>

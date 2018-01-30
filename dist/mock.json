@@ -1,8 +1,9 @@
 {
     "intro": {
+        "backgroundImage": "/images/intro-bg.jpg",
         "name": "Chris Knopf",
         "summary": "Team-orientated, full stack developer with a focus on web technologies. Quick learner with experience in a variety of tools and frameworks",
-        "profileImage": "/profile-image.jpg",
+        "profileImage": "/images/profile-image.jpg",
         "email": "chris@nofmonster.com",
         "phone": "507.649.1263"
     },
@@ -36,6 +37,11 @@
                 "Honed my skills with modern front-end tools & architecture patterns",
                 "Worked with systems that have predictable patterns of high traffic and display updated stats in near real time",
                 "Advocated for agile processes within the team, and releasing MVP solutions to maximize efficiency"
+            ],
+            "photos": [
+                { "caption": "Working at ABLE Brewing", "path": "/images/fanball/fanball-dev-at-able.jpg" },
+                { "caption": "Roof party at the new office", "path": "/images/fanball/fanball-roof-party.jpg" },
+                { "caption": "Owen & Soph in there SHT shirts", "path": "/images/fanball/fanball-soph-and-owen.jpg" }
             ]
         },
         {
