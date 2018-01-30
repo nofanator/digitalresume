@@ -12,7 +12,7 @@ function Home(props) {
     return (
         <PageTemplate>
             <Intro />
-            {/* <Education /> */}
+            <Education />
             <Skills />
             <Experience />
             <About />

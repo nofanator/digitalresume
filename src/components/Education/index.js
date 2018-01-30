@@ -1,2 +1,3 @@
 import Education from './Education'
-export default Education
+import { withEducationData } from 'hocs/withEducationData'
+export default withEducationData(Education)

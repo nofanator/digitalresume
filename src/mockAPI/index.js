@@ -68,4 +68,17 @@ function getAbout() {
 }
 
 
-export { getIntro, getSkills, getExperience, getAbout, getExperienceById }
+function getEducation() {
+    return axios.get('/mock.json')
+        .catch((error) => {
+            console.log(error)
+            return null
+        })
+        .then((response) => {
+            const data = response.data
+            const payload = data.education
+            return payload
+        })
+}
+
+export { getIntro, getSkills, getExperience, getAbout, getExperienceById, getEducation }
