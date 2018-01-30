@@ -12,14 +12,20 @@ const Div = styled.div`
     border-bottom: 1px dashed ${props => props.borderColor};
     margin: 16px 0;
     padding-bottom: 16px;
+
     h3 {
         margin: 6px 0 12px !important;
     }
+
     &:last-child {
         border-bottom: none;
         margin-bottom: 0;
         padding-bottom: 0;
     }
+`
+
+const LinkContainer = styled.div`
+    text-align: right;
 `
 
 function Job(props) {
@@ -32,7 +38,9 @@ function Job(props) {
             <JobDuration start={ job.start } end={ job.end } />
             <h3><JobTitle employer={ job.employer } title={ job.title } /></h3>
             <p>{ job.summary }</p>
-            <Link to={`/job/${job.id}`}>Learn more</Link>
+            <LinkContainer>
+                <Link className="right" to={`/job/${job.id}`}>Learn more</Link>
+            </LinkContainer>
         </Div>
     )
 }

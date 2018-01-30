@@ -28,7 +28,7 @@ export function withAboutData(Wrapper) {
                         : null
                     }
                     endComponent={ data.loaded 
-                        ? <Wrapper {...data} />
+                        ? <Wrapper {...this.props} {...data} />
                         : null
                     } 
                 />

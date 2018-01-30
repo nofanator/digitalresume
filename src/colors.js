@@ -5,18 +5,18 @@ export const themes = {
 }
 
 const lightTheme = {
-    BACKGROUND: '#EFF5F9',    
-    TEXT: '#525951'
+    BACKGROUND: '#404040',    
+    TEXT: '#fff'
 }
 
 const neutralTheme = {
-    BACKGROUND: '#d5d4d2',
-    TEXT: '#2d2523'
+    BACKGROUND: '#202020',
+    TEXT: '#fff'
 }
 
 const darkTheme = {
-    BACKGROUND: '#302825',
-    TEXT: '#e7e8e2'
+    BACKGROUND: '#000000',
+    TEXT: '#fff'
 }
 
 export function getTheme(name) {

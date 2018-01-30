@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import Section from 'common/Section'
 import HorizontalList from 'common/HorizontalList'
 
@@ -9,10 +10,10 @@ const Div = styled.div`
 `
 
 function About(props) {
-    const { summary, repo, tech } = props
+    const { summary, repo, tech, themeName } = props
 
     return (
-        <Section>
+        <Section themeName={ themeName }>
             <Div>
                 <h2>About this site</h2>
                 <p>{ summary }</p>
@@ -22,6 +23,10 @@ function About(props) {
             </Div>
         </Section>
     )
+}
+
+About.propTypes = {
+    themeName: PropTypes.string,
 }
 
 export default About

@@ -6,6 +6,10 @@ const TitleInner = styled.span`
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    span {
+        text-align: right;
+    }
 `
 
 function JobTitle(props) {

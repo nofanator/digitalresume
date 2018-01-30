@@ -9,17 +9,25 @@ import Section from 'common/Section'
 import { Detail } from 'components/Experience'
 import About from 'components/About'
 
+import styled from 'styled-components'
 
-
+const BackDiv = styled.div`
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+`
 
 function JobDetail(props) {
     return (
         <PageTemplate>
             <Section themeName={ themes.DARK } skinny={ true }>
-                <Link to="/">Back</Link>
+                <BackDiv>
+                    <Link to="/">Back</Link>
+                    <span>Chris Knopf</span>
+                </BackDiv>
             </Section>
             <Detail job={ props } />
-            <About />
+            <About themeName={ themes.DARK } />
         </PageTemplate>
     )
 }

@@ -6,6 +6,10 @@ import styled from 'styled-components'
 
 const Div = styled.div`
     text-align: center;
+
+    h1 {
+        margin-top: 20px;
+    }
 `
 
 
@@ -13,7 +17,7 @@ const Div = styled.div`
 function Intro(props) {
     const { name, summary, profileImage } = props
     return (
-        <Section>
+        <Section backgroundImage="/intro-bg.jpg">
             <Div>
                 <ProfileImage imagePath={ profileImage } />
                 <h1>{ name }</h1>

@@ -24,7 +24,7 @@ const moveCube = keyframes`
 `
 
 const Cube = styled.div`
-    background-color: #333;
+    background-color: #fff;
     width: 15px;
     height: 15px;
     position: absolute;
