@@ -27,9 +27,10 @@ const DivImage = styled.div`
     background-image: url(${props => props.imagePath});
     background-size: cover;
     background-position: center center;
-    max-width: 100%;
     min-width: 200px;
-    height: 200px;
+    width: 100%;
+    height: 0;
+    padding-bottom: 75%;
 `
 
 
