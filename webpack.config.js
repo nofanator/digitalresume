@@ -1,28 +1,47 @@
 var path = require('path');
 var webpack = require('webpack');
+var UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 
-var SRC = path.resolve(__dirname, "src");
-var DIST = path.resolve(__dirname, "dist");
-var NODE_MODULES = path.resolve(__dirname, "node_modules");
+module.exports = (env = {}) => {
+    var SRC = path.resolve(__dirname, "src");
+    var DIST = path.resolve(__dirname, "dist");
+    var NODE_MODULES = path.resolve(__dirname, "node_modules");
 
-var config = {
-    entry: SRC + "/app.js",
-    output: {
-        path: DIST,
-        filename: "app-build.js"
-    },
-    module: {
-        loaders: [{
-            include: SRC,
-            loader: "babel-loader",
-        }]
-    },
-    resolve: {
-        modules: [
-            SRC,
-            NODE_MODULES
-        ]
-    },
+    const isProd = env.production === true 
+
+    var config = {
+        entry: SRC + "/app.js",
+        output: {
+            path: DIST,
+            filename: "app-build.min.js"
+        },
+        module: {
+            loaders: [{
+                include: SRC,
+                loader: "babel-loader",
+            }]
+        },
+        plugins: isProd 
+            ? [
+                new webpack.DefinePlugin({
+                    'process.env.NODE_ENV': JSON.stringify('production')
+                }),
+                new UglifyJsPlugin(
+                {
+                    uglifyOptions:{
+                        output: {
+                            ascii_only: true,                    }
+                        }
+                })
+            ] 
+            : [],
+        resolve: {
+            modules: [
+                SRC,
+                NODE_MODULES
+            ]
+        },
+    }
+
+    return config
 }
-
-module.exports = config;
