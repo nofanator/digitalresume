@@ -50,7 +50,6 @@ function ImageGrid(props) {
                 return (
                     <DivImageContainer key={`image-${i}`}>
                         <DivImage imagePath={ image.path } />
-                        <span>{ image.caption }</span>
                     </DivImageContainer>
                 )
             })}

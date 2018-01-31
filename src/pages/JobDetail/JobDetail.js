@@ -27,7 +27,7 @@ function JobDetail(props) {
                 </BackDiv>
             </Section>
             <Detail job={ props } />
-            <About themeName={ themes.DARK } />
+            <About themeName={ themes.LIGHT } />
         </PageTemplate>
     )
 }

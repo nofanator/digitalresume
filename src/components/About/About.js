@@ -7,6 +7,10 @@ import styled from 'styled-components'
 
 const Div = styled.div`
     text-align: center;
+
+    a {
+        text-transform: lowercase;
+    }
 `
 
 function About(props) {
@@ -19,7 +23,7 @@ function About(props) {
                 <p>{ summary }</p>
                 <h3>Tech used</h3>
                 <HorizontalList listKey="tech" list={ tech } center={ true } />
-                <p>{ repo }</p>
+                <p><a href={repo}>{ repo }</a></p>
             </Div>
         </Section>
     )

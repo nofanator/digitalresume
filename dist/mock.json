@@ -41,7 +41,7 @@
             "photos": [
                 { "caption": "Working at ABLE Brewing", "path": "/images/fanball/fanball-dev-at-able.jpg" },
                 { "caption": "Roof party at the new office", "path": "/images/fanball/fanball-roof-party.jpg" },
-                { "caption": "Owen & Soph in there SHT shirts", "path": "/images/fanball/fanball-soph-and-owen.jpg" }
+                { "caption": "Owen & Soph in their SHT shirts", "path": "/images/fanball/fanball-soph-and-owen.jpg" }
             ]
         },
         {
@@ -56,6 +56,9 @@
                 "Built the foundation for an isomorphic React/Express website for duffy.com",
                 "Created RESTful micro services & optimization layers for mobile applications",
                 "Wrote enterprise software designed to pass integration tests, unit-tests, and code-quality gates"
+            ],
+            "photos": [
+                { "caption": "Duffy retreat", "path":"/images/duffy/duffy-cabin.jpg" }
             ]
         },
         {
@@ -69,6 +72,9 @@
                 "Gained experience managing different aspects of a project’s life-cycle: sales, RFPs, invoicing, etc.",
                 "Built and maintained a sports-scheduling SASS platform from the ground up",
                 "Completed front-end focused, interactive websites for agencies in the Twin Cities"
+            ],
+            "photos": [
+                { "caption": "My desk at coco", "path":"/images/gybe/gybe-coco-desk.jpg" }
             ]
         },
         {
@@ -97,9 +103,14 @@
                 "Helped build core tools & frameworks which powered the majority of sites built by Ratchet",
                 "Expertise maintaining a professional, positive, and productive attitude when working on high stress projects",
                 "Gained the ability to adapt to different languages quickly such as cold fusion and PHP"
+            ],
+            "photos": [
+                { "path":"/images/ratchet/ratchet-onwc-1.jpg" },
+                { "path":"/images/ratchet/ratchet-onwc-2.jpg" },
+                { "path":"/images/ratchet/ratchet-paintball.jpg" }
             ]
         }
-    ],    
+    ],
     "about": {
         "summary": "I built this site to demonostrate familiarity with the technologies listed below. This is over-engineered and meant to provoke discussion about front-end architecture patterns. The code is just as important as the content, checkout the public repo.",
         "tech": [
@@ -110,6 +121,6 @@
             "Mock API",
             "HOC data loading pattern"
         ],
-        "repo": "http://www.google.com"
+        "repo": "https://bitbucket.org/papanof/digitalresume/"
     }
 }

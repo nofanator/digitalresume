@@ -20,6 +20,10 @@ const Sep = styled.span`
     font-size: 1.4em;
     font-weight: bold;
     line-height: 1rem;
+
+    &:first-child {
+        margin-left: 0;
+    }
 `
 
 

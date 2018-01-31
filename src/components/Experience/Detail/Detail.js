@@ -48,7 +48,7 @@ function Detail(props) {
                 <Achievements list={ job.achievements } />
             </Section>
             {hasPhotos &&
-                <Section>
+                <Section themeName={ themes.DARK }>
                     <ImageGrid images={ job.photos } />
                 </Section>
             }
