@@ -29,7 +29,7 @@ export function withExperienceDetailData(experienceId) {
                 return (
                     <Transition 
                         startComponent={ 
-                            <Loading description="Loading experience data, How slow can we go?" /> 
+                            <Loading description="Loading experience detail data..." /> 
                         }
                         endComponent={ data 
                             ? <Wrapper {...data} />
