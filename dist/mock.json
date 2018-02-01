@@ -18,11 +18,11 @@
     "skills": [
         { 
             "title": "Core Technologies",  
-            "list": ["C#", "SQL", "HTML", "CSS", "JavaScript", "Node.js", "PHP", "Unit Testing"]
+            "list": ["JavaScript", "CSS", "C#", "SQL", "HTML", "Node.js", "PHP", "Unit Testing"]
         },
         {
             "title": "Tools & Frameworks",
-            "list": ["ASP.NET MVC", "ASP.NET Web API", "ASP.NET Web Forms", "Entity Framework", "React", "Redux", "Sass/Less", "WordPress",  "jQuery", "Microsoft Azure", "IIS"]
+            "list": ["React", "Redux", "Sass/Less", "ASP.NET MVC", "ASP.NET Web API", "ASP.NET Web Forms", "Entity Framework", "WordPress",  "jQuery", "Microsoft Azure", "IIS"]
         }
     ],
     "experience": [
