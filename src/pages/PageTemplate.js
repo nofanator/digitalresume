@@ -33,6 +33,7 @@ injectGlobal`
             text-transform: uppercase;
             cursor: pointer;
             color: inherit;
+            font-weight: 700;
         }
     }
 `
