@@ -20,7 +20,7 @@ function Loading(props) {
     return (
         <Section>
             <Div>
-                <h3>Simulating Load...</h3>
+                <h3>Simulating Load &amp; Caching Data...</h3>
                 <Spinner />
                 {description && <p>{ description }</p>}
             </Div>

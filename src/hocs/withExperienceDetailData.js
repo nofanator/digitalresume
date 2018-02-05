@@ -1,35 +1,35 @@
 import React, { Component } from 'react'
+import { connect } from "react-redux" 
 import { getExperienceById } from 'mockAPI'
+import { updateJobDetail } from 'store/actions/experienceActions'
 
 import Transition from 'common/Transition'
 import Loading from 'common/Loading'
 
 export function withExperienceDetailData(experienceId) {
     return (Wrapper) => {
-        return class dataProvider extends Component {
-            constructor() {
-                super()
-                this.state = {
-                    data: null
-                }
-            }
-
+        class dataProvider extends Component {
             componentDidMount() {
-                getExperienceById(experienceId).then(
-                    detailData => setTimeout(
-                        () => this.setState({ data: detailData }), 
-                        1200
+                const { updateJobDetail, data } = this.props
+
+                if (!data) {
+                    getExperienceById(experienceId).then(
+                        detailData => setTimeout(
+                            () => updateJobDetail(detailData), 
+                            1200
+                        )
                     )
-                )
+                }
             }
     
             render() {
-                const { data } = this.state
+                const { data } = this.props
     
                 return (
                     <Transition 
-                        startComponent={ 
-                            <Loading description="Loading experience detail data..." /> 
+                        startComponent={ !data 
+                            ? <Loading description="Loading experience detail data..." /> 
+                            : null
                         }
                         endComponent={ data 
                             ? <Wrapper {...data} />
@@ -39,5 +39,23 @@ export function withExperienceDetailData(experienceId) {
                 )
             }
         }
+
+        function mapStateToProps(state) {
+            const detailArray = state.experience.jobDetail
+
+            return {
+                data: detailArray.length > 0
+                    ? detailArray.find(x => x.id == experienceId)
+                    : null
+            }
+        }
+        
+        function mapDispatchToProps(dispatch) {
+            return {
+                updateJobDetail: (detailData) => dispatch(updateJobDetail(detailData))
+            }
+        }
+    
+        return connect(mapStateToProps, mapDispatchToProps)(dataProvider)
     }
 }
