@@ -24,7 +24,8 @@ module.exports = (env = {}) => {
         plugins: isProd 
             ? [
                 new webpack.DefinePlugin({
-                    'process.env.NODE_ENV': JSON.stringify('production')
+                    'process.env.NODE_ENV': JSON.stringify('production'),
+                    'process.env.GA_TRACKING_ID': JSON.stringify('UA-113627363-1')
                 }),
                 new UglifyJsPlugin(
                 {
@@ -34,7 +35,11 @@ module.exports = (env = {}) => {
                         }
                 })
             ] 
-            : [],
+            : [
+                new webpack.DefinePlugin({
+                    'process.env.GA_TRACKING_ID': null
+                }),
+            ],
         resolve: {
             modules: [
                 SRC,
