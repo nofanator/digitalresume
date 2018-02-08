@@ -7,7 +7,7 @@ import Transition from 'common/Transition'
 import Loading from 'common/Loading'
 
 export function withExperienceDetailData(experienceId) {
-    return (Wrapper) => {
+    return (WrappedComponent) => {
         class dataProvider extends Component {
             componentDidMount() {
                 const { updateJobDetail, data } = this.props
@@ -32,7 +32,7 @@ export function withExperienceDetailData(experienceId) {
                             : null
                         }
                         endComponent={ data 
-                            ? <Wrapper {...data} />
+                            ? <WrappedComponent {...data} />
                             : null
                         } 
                     />
