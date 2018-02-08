@@ -6,9 +6,9 @@ If you want to get this up and running locally:
 2. Pull the code
 3. Open up a terminal and navigate to the projects root
 
-yarn install
-yarn run dev
-http://localhost:8080
+yarn install  
+yarn run dev  
+http://localhost:8080  
 
 
 
