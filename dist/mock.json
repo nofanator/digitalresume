@@ -22,7 +22,7 @@
         },
         {
             "title": "Tools & Frameworks",
-            "list": ["React", "Redux", "Sass/Less", "ASP.NET MVC", "ASP.NET Web API", "ASP.NET Web Forms", "Entity Framework", "WordPress",  "jQuery", "Microsoft Azure", "IIS"]
+            "list": ["React", "Redux", "Sass/Less", "GraphQL", "Apollo", "ASP.NET MVC", "ASP.NET Web API", "ASP.NET Web Forms", "Entity Framework", "WordPress",  "jQuery", "Microsoft Azure", "IIS"]
         }
     ],
     "experience": [
